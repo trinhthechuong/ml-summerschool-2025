@@ -1,0 +1,187 @@
+{
+  "MM077": {
+    "Disease": "Multiple Myeloma",
+    "Drugs": {
+      "Vinorelbin_Tubulin inhibitor": {
+        "Predicted_Class": "no_effect",
+        "Predicted_Prob": 0.6756317615509033,
+        "SHAP": {
+          "Top_Positive": [
+            {
+              "Feature": "Prot_PTRH2",
+              "Value": 0.29409366846084595
+            },
+            {
+              "Feature": "Prot_THOC3",
+              "Value": 0.19555509090423584
+            },
+            {
+              "Feature": "Prot_PSMD3",
+              "Value": 0.09048180282115936
+            },
+            {
+              "Feature": "Prot_AXL",
+              "Value": 0.08389198035001755
+            },
+            {
+              "Feature": "Prot_ACSF3",
+              "Value": 0.08145955950021744
+            },
+            {
+              "Feature": "Prot_RABGEF1",
+              "Value": 0.04024611786007881
+            },
+            {
+              "Feature": "Prot_MED23",
+              "Value": 0.03727215901017189
+            },
+            {
+              "Feature": "Prot_ACO2",
+              "Value": 0.03260554373264313
+            },
+            {
+              "Feature": "Prot_SNX1",
+              "Value": 0.026827532798051834
+            },
+            {
+              "Feature": "Prot_NUFIP2",
+              "Value": 0.02230880782008171
+            }
+          ],
+          "Top_Negative": [
+            {
+              "Feature": "Prot_SORL1",
+              "Value": -0.26377812027931213
+            },
+            {
+              "Feature": "Prot_CD101",
+              "Value": -0.15786859393119812
+            },
+            {
+              "Feature": "Prot_UBXN1",
+              "Value": -0.11280998587608337
+            },
+            {
+              "Feature": "Prot_ISYNA1",
+              "Value": -0.08723688870668411
+            },
+            {
+              "Feature": "Prot_NFKB2",
+              "Value": -0.07712164521217346
+            },
+            {
+              "Feature": "Cyto_PROK1",
+              "Value": -0.07573790103197098
+            },
+            {
+              "Feature": "Prot_CEP250",
+              "Value": -0.06819142401218414
+            },
+            {
+              "Feature": "Prot_ARL14EP",
+              "Value": -0.06400131434202194
+            },
+            {
+              "Feature": "Prot_ECPAS",
+              "Value": -0.05693800374865532
+            },
+            {
+              "Feature": "Prot_GNS",
+              "Value": -0.04885706305503845
+            }
+          ]
+        }
+      },
+      "Dexamethasone+Ixazomib+Lenalidomide_Proteasome Inhibitor regime": {
+        "Predicted_Class": "no_effect",
+        "Predicted_Prob": 0.8499709367752075,
+        "SHAP": {
+          "Top_Positive": [
+            {
+              "Feature": "Prot_BPI",
+              "Value": 0.08760956674814224
+            },
+            {
+              "Feature": "Prot_RBM5",
+              "Value": 0.08525917679071426
+            },
+            {
+              "Feature": "Prot_TMEM43",
+              "Value": 0.08396413922309875
+            },
+            {
+              "Feature": "Prot_COMMD10",
+              "Value": 0.07462672889232635
+            },
+            {
+              "Feature": "Prot_PPBP",
+              "Value": 0.07292202860116959
+            },
+            {
+              "Feature": "Prot_REPIN1",
+              "Value": 0.07246394455432892
+            },
+            {
+              "Feature": "Prot_ACTB",
+              "Value": 0.06418745219707489
+            },
+            {
+              "Feature": "Prot_UNIPROT:Q5T2T1",
+              "Value": 0.06282117962837219
+            },
+            {
+              "Feature": "Prot_HRG",
+              "Value": 0.0591919906437397
+            },
+            {
+              "Feature": "Prot_APPL1",
+              "Value": 0.058847926557064056
+            }
+          ],
+          "Top_Negative": [
+            {
+              "Feature": "Prot_GPR89A|GPR89B",
+              "Value": -0.1834191530942917
+            },
+            {
+              "Feature": "Prot_MPEG1",
+              "Value": -0.10523238778114319
+            },
+            {
+              "Feature": "Prot_NUP93",
+              "Value": -0.0823594182729721
+            },
+            {
+              "Feature": "Prot_LRMDA",
+              "Value": -0.07147067785263062
+            },
+            {
+              "Feature": "Prot_MYO1C",
+              "Value": -0.07015085220336914
+            },
+            {
+              "Feature": "Prot_GNG12",
+              "Value": -0.06525356322526932
+            },
+            {
+              "Feature": "Prot_PSPH",
+              "Value": -0.06378365308046341
+            },
+            {
+              "Feature": "Prot_HDHD2",
+              "Value": -0.0611557811498642
+            },
+            {
+              "Feature": "Prot_CYB5B",
+              "Value": -0.05743947625160217
+            },
+            {
+              "Feature": "Prot_TPP1",
+              "Value": -0.050529271364212036
+            }
+          ]
+        }
+      }
+    }
+  }
+}

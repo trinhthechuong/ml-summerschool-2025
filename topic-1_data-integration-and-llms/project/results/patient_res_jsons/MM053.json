@@ -1,0 +1,97 @@
+{
+  "MM053": {
+    "Disease": "Multiple Myeloma",
+    "Drugs": {
+      "Vinorelbin_Tubulin inhibitor": {
+        "Predicted_Class": "no_effect",
+        "Predicted_Prob": 0.6510005593299866,
+        "SHAP": {
+          "Top_Positive": [
+            {
+              "Feature": "Prot_CD101",
+              "Value": 0.19630950689315796
+            },
+            {
+              "Feature": "Prot_UBXN1",
+              "Value": 0.13126403093338013
+            },
+            {
+              "Feature": "Prot_ACSF3",
+              "Value": 0.09166035801172256
+            },
+            {
+              "Feature": "Prot_PSMD3",
+              "Value": 0.08662274479866028
+            },
+            {
+              "Feature": "Cyto_PROK1",
+              "Value": 0.08505944907665253
+            },
+            {
+              "Feature": "Prot_AXL",
+              "Value": 0.07627316564321518
+            },
+            {
+              "Feature": "Prot_NFKB2",
+              "Value": 0.06747620552778244
+            },
+            {
+              "Feature": "Prot_ARL14EP",
+              "Value": 0.048622265458106995
+            },
+            {
+              "Feature": "Prot_MED23",
+              "Value": 0.03727215901017189
+            },
+            {
+              "Feature": "Prot_ACO2",
+              "Value": 0.03260554373264313
+            }
+          ],
+          "Top_Negative": [
+            {
+              "Feature": "Prot_PTRH2",
+              "Value": -0.31377169489860535
+            },
+            {
+              "Feature": "Prot_SORL1",
+              "Value": -0.2538757920265198
+            },
+            {
+              "Feature": "Prot_THOC3",
+              "Value": -0.22394365072250366
+            },
+            {
+              "Feature": "Prot_ISYNA1",
+              "Value": -0.0929320901632309
+            },
+            {
+              "Feature": "Prot_RABGEF1",
+              "Value": -0.05575374513864517
+            },
+            {
+              "Feature": "Prot_CYB5R2",
+              "Value": -0.04416345804929733
+            },
+            {
+              "Feature": "Prot_TMEM214",
+              "Value": -0.03698926046490669
+            },
+            {
+              "Feature": "Prot_SIRT6",
+              "Value": -0.03540872409939766
+            },
+            {
+              "Feature": "Prot_SNX1",
+              "Value": -0.03426893800497055
+            },
+            {
+              "Feature": "Prot_C11orf98",
+              "Value": -0.03419825807213783
+            }
+          ]
+        }
+      }
+    }
+  }
+}

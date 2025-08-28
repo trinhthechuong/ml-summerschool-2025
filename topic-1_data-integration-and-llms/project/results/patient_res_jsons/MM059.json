@@ -1,0 +1,187 @@
+{
+  "MM059": {
+    "Disease": "Multiple Myeloma",
+    "Drugs": {
+      "Lenalidomide_Corticosteroid + IMID": {
+        "Predicted_Class": "no_effect",
+        "Predicted_Prob": 0.9676403999328613,
+        "SHAP": {
+          "Top_Positive": [
+            {
+              "Feature": "Prot_NUDT21",
+              "Value": 0.24947917461395264
+            },
+            {
+              "Feature": "Prot_SERPINB6",
+              "Value": 0.13531015813350677
+            },
+            {
+              "Feature": "Prot_CTNNA1",
+              "Value": 0.07321187853813171
+            },
+            {
+              "Feature": "Prot_BYSL",
+              "Value": 0.05705574154853821
+            },
+            {
+              "Feature": "Prot_NOL6",
+              "Value": 0.05411645770072937
+            },
+            {
+              "Feature": "Prot_TRIM28",
+              "Value": 0.04787661135196686
+            },
+            {
+              "Feature": "Prot_DAG1",
+              "Value": 0.039473485201597214
+            },
+            {
+              "Feature": "Prot_CUL1",
+              "Value": 0.02975265122950077
+            },
+            {
+              "Feature": "Prot_RASA3",
+              "Value": 0.028923237696290016
+            },
+            {
+              "Feature": "Prot_SNX9",
+              "Value": 0.02808314934372902
+            }
+          ],
+          "Top_Negative": [
+            {
+              "Feature": "Prot_RUVBL2",
+              "Value": -0.26273542642593384
+            },
+            {
+              "Feature": "Prot_AP5Z1",
+              "Value": -0.18381325900554657
+            },
+            {
+              "Feature": "Prot_RBM4B",
+              "Value": -0.09026999026536942
+            },
+            {
+              "Feature": "Prot_RAD23B",
+              "Value": -0.034965675324201584
+            },
+            {
+              "Feature": "Prot_UNIPROT:Q6BDS2",
+              "Value": -0.03489947319030762
+            },
+            {
+              "Feature": "Prot_HPS4",
+              "Value": -0.028641700744628906
+            },
+            {
+              "Feature": "Prot_MRPL37",
+              "Value": -0.012578895315527916
+            },
+            {
+              "Feature": "Prot_MRPL4",
+              "Value": -0.011505797505378723
+            },
+            {
+              "Feature": "Prot_GSKIP",
+              "Value": -0.01141025498509407
+            },
+            {
+              "Feature": "Prot_METAP2",
+              "Value": -0.009666663594543934
+            }
+          ]
+        }
+      },
+      "Thalidomide_Corticosteroid + IMID": {
+        "Predicted_Class": "no_effect",
+        "Predicted_Prob": 0.8956114649772644,
+        "SHAP": {
+          "Top_Positive": [
+            {
+              "Feature": "Prot_UTP18",
+              "Value": 0.11992113292217255
+            },
+            {
+              "Feature": "Prot_ADA",
+              "Value": 0.09592141956090927
+            },
+            {
+              "Feature": "Prot_TXNIP",
+              "Value": 0.09305757284164429
+            },
+            {
+              "Feature": "Prot_LRCH4",
+              "Value": 0.07327176630496979
+            },
+            {
+              "Feature": "Prot_VPS16",
+              "Value": 0.054585836827754974
+            },
+            {
+              "Feature": "Prot_DENR",
+              "Value": 0.05220452696084976
+            },
+            {
+              "Feature": "Prot_GLUD1",
+              "Value": 0.045237768441438675
+            },
+            {
+              "Feature": "Prot_RPS12",
+              "Value": 0.04493911564350128
+            },
+            {
+              "Feature": "Prot_CNP",
+              "Value": 0.040000367909669876
+            },
+            {
+              "Feature": "Prot_YTHDC2",
+              "Value": 0.03631509840488434
+            }
+          ],
+          "Top_Negative": [
+            {
+              "Feature": "Prot_ANXA3",
+              "Value": -0.3417217433452606
+            },
+            {
+              "Feature": "Prot_CMTM5",
+              "Value": -0.30198121070861816
+            },
+            {
+              "Feature": "Prot_AMPD3",
+              "Value": -0.09845328330993652
+            },
+            {
+              "Feature": "Prot_SSR4",
+              "Value": -0.08717846870422363
+            },
+            {
+              "Feature": "Prot_ATP1B1",
+              "Value": -0.05139130353927612
+            },
+            {
+              "Feature": "Prot_CCDC93",
+              "Value": -0.049382515251636505
+            },
+            {
+              "Feature": "Prot_HP",
+              "Value": -0.036671996116638184
+            },
+            {
+              "Feature": "Prot_MCM4",
+              "Value": -0.03452799469232559
+            },
+            {
+              "Feature": "Prot_SLC16A7",
+              "Value": -0.030416451394557953
+            },
+            {
+              "Feature": "Prot_CETN2",
+              "Value": -0.027541425079107285
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "MM047": {
+    "Disease": "Multiple Myeloma",
+    "Drugs": {
+      "Dexamethasone+Ixazomib+Lenalidomide_Proteasome Inhibitor regime": {
+        "Predicted_Class": "no_effect",
+        "Predicted_Prob": 0.8062728643417358,
+        "SHAP": {
+          "Top_Positive": [
+            {
+              "Feature": "Prot_RBM5",
+              "Value": 0.09362765401601791
+            },
+            {
+              "Feature": "Prot_TMEM43",
+              "Value": 0.0816783457994461
+            },
+            {
+              "Feature": "Prot_BPI",
+              "Value": 0.08068649470806122
+            },
+            {
+              "Feature": "Prot_MPEG1",
+              "Value": 0.07994052767753601
+            },
+            {
+              "Feature": "Prot_COMMD10",
+              "Value": 0.07462672889232635
+            },
+            {
+              "Feature": "Prot_PPBP",
+              "Value": 0.06752093881368637
+            },
+            {
+              "Feature": "Prot_GNG12",
+              "Value": 0.06597902625799179
+            },
+            {
+              "Feature": "Prot_UNIPROT:Q5T2T1",
+              "Value": 0.06282117962837219
+            },
+            {
+              "Feature": "Prot_ACTB",
+              "Value": 0.059509314596652985
+            },
+            {
+              "Feature": "Prot_HRG",
+              "Value": 0.054920442402362823
+            }
+          ],
+          "Top_Negative": [
+            {
+              "Feature": "Prot_GPR89A|GPR89B",
+              "Value": -0.1876678764820099
+            },
+            {
+              "Feature": "Prot_APPL1",
+              "Value": -0.15603594481945038
+            },
+            {
+              "Feature": "Prot_CYB5B",
+              "Value": -0.07783428579568863
+            },
+            {
+              "Feature": "Prot_REPIN1",
+              "Value": -0.06882969290018082
+            },
+            {
+              "Feature": "Prot_IGKV2-24",
+              "Value": -0.06693153083324432
+            },
+            {
+              "Feature": "Prot_HDHD2",
+              "Value": -0.0611557811498642
+            },
+            {
+              "Feature": "Prot_TGFB1I1",
+              "Value": -0.0485844612121582
+            },
+            {
+              "Feature": "Prot_PSPH",
+              "Value": -0.04463028162717819
+            },
+            {
+              "Feature": "Prot_RBL2",
+              "Value": -0.04390542209148407
+            },
+            {
+              "Feature": "Prot_PMPCA",
+              "Value": -0.04240437224507332
+            }
+          ]
+        }
+      }
+    }
+  }
+}

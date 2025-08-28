@@ -1,0 +1,97 @@
+{
+  "MM089": {
+    "Disease": "Multiple Myeloma",
+    "Drugs": {
+      "Dexamethasone+Carfilzomib+Panobinostat_Proteasome Inhibitor regime": {
+        "Predicted_Class": "positive_effect",
+        "Predicted_Prob": 0.5166183710098267,
+        "SHAP": {
+          "Top_Positive": [
+            {
+              "Feature": "Prot_MORC3",
+              "Value": 0.15136516094207764
+            },
+            {
+              "Feature": "Prot_PTPN7",
+              "Value": 0.13617494702339172
+            },
+            {
+              "Feature": "Prot_UNIPROT:Q9Y6Y0",
+              "Value": 0.07546964287757874
+            },
+            {
+              "Feature": "Prot_ZNF185",
+              "Value": 0.062195513397455215
+            },
+            {
+              "Feature": "Prot_MRPL44",
+              "Value": 0.058151744306087494
+            },
+            {
+              "Feature": "Prot_DIDO1",
+              "Value": 0.057396166026592255
+            },
+            {
+              "Feature": "Prot_VTA1",
+              "Value": 0.0334368571639061
+            },
+            {
+              "Feature": "Prot_AVL9",
+              "Value": 0.02454453706741333
+            },
+            {
+              "Feature": "Prot_CBX3",
+              "Value": 0.024407818913459778
+            },
+            {
+              "Feature": "Prot_KMO",
+              "Value": 0.02362125739455223
+            }
+          ],
+          "Top_Negative": [
+            {
+              "Feature": "Prot_MRC1",
+              "Value": -0.7390478849411011
+            },
+            {
+              "Feature": "Prot_ATPAF1",
+              "Value": -0.22884808480739594
+            },
+            {
+              "Feature": "Prot_FKBP1A",
+              "Value": -0.12181910127401352
+            },
+            {
+              "Feature": "Prot_CRBN",
+              "Value": -0.09104373306035995
+            },
+            {
+              "Feature": "Prot_NSUN5",
+              "Value": -0.08641991019248962
+            },
+            {
+              "Feature": "Prot_RALBP1",
+              "Value": -0.0816127359867096
+            },
+            {
+              "Feature": "Prot_SPEN",
+              "Value": -0.05841708183288574
+            },
+            {
+              "Feature": "Prot_WDR1",
+              "Value": -0.05616705119609833
+            },
+            {
+              "Feature": "Prot_YKT6",
+              "Value": -0.04890991374850273
+            },
+            {
+              "Feature": "Cyto_CXCL13",
+              "Value": -0.0481829009950161
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "MM048": {
+    "Disease": "Multiple Myeloma",
+    "Drugs": {
+      "Dexamethasone_Corticosteroid": {
+        "Predicted_Class": "no_effect",
+        "Predicted_Prob": 0.8301714062690735,
+        "SHAP": {
+          "Top_Positive": [
+            {
+              "Feature": "Prot_HACD3",
+              "Value": 0.12635917961597443
+            },
+            {
+              "Feature": "Prot_PPM1A",
+              "Value": 0.07410925626754761
+            },
+            {
+              "Feature": "Prot_UNIPROT:Q96L93",
+              "Value": 0.06522761285305023
+            },
+            {
+              "Feature": "Prot_QSOX1",
+              "Value": 0.05120984464883804
+            },
+            {
+              "Feature": "Prot_SPAG9",
+              "Value": 0.05050045996904373
+            },
+            {
+              "Feature": "Prot_MANEA",
+              "Value": 0.04959816858172417
+            },
+            {
+              "Feature": "Prot_ENPEP",
+              "Value": 0.04925408959388733
+            },
+            {
+              "Feature": "Prot_C1orf226",
+              "Value": 0.047904301434755325
+            },
+            {
+              "Feature": "Prot_CTPS1",
+              "Value": 0.04489528387784958
+            },
+            {
+              "Feature": "Prot_DRG1",
+              "Value": 0.04205714911222458
+            }
+          ],
+          "Top_Negative": [
+            {
+              "Feature": "Prot_B3GLCT",
+              "Value": -0.4239211976528168
+            },
+            {
+              "Feature": "Prot_PCYT1A",
+              "Value": -0.17478182911872864
+            },
+            {
+              "Feature": "Prot_ZNF598",
+              "Value": -0.1080339252948761
+            },
+            {
+              "Feature": "Prot_CTNNBL1",
+              "Value": -0.0861646831035614
+            },
+            {
+              "Feature": "Prot_DENND10",
+              "Value": -0.0667465478181839
+            },
+            {
+              "Feature": "Prot_RPS6KA5",
+              "Value": -0.05746030807495117
+            },
+            {
+              "Feature": "Prot_PSEN1",
+              "Value": -0.05167696997523308
+            },
+            {
+              "Feature": "Prot_GUCY1B1",
+              "Value": -0.041730478405952454
+            },
+            {
+              "Feature": "Prot_CCDC22",
+              "Value": -0.039418939501047134
+            },
+            {
+              "Feature": "Prot_CLPTM1",
+              "Value": -0.03780563548207283
+            }
+          ]
+        }
+      },
+      "Prednisone_Corticosteroid": {
+        "Predicted_Class": "no_effect",
+        "Predicted_Prob": 0.9696882367134094,
+        "SHAP": {
+          "Top_Positive": [
+            {
+              "Feature": "Prot_SCYL1",
+              "Value": 0.13524340093135834
+            },
+            {
+              "Feature": "Prot_PGD",
+              "Value": 0.08692967891693115
+            },
+            {
+              "Feature": "Prot_ADA",
+              "Value": 0.08501601219177246
+            },
+            {
+              "Feature": "Prot_SCRN2",
+              "Value": 0.08418849110603333
+            },
+            {
+              "Feature": "Prot_MPP1",
+              "Value": 0.05830083414912224
+            },
+            {
+              "Feature": "Prot_CLCC1",
+              "Value": 0.057101719081401825
+            },
+            {
+              "Feature": "Prot_ICAM3",
+              "Value": 0.055060941725969315
+            },
+            {
+              "Feature": "Prot_GATM",
+              "Value": 0.03815102577209473
+            },
+            {
+              "Feature": "Cyto_IL15",
+              "Value": 0.03718799725174904
+            },
+            {
+              "Feature": "Prot_WDR3",
+              "Value": 0.03620968759059906
+            }
+          ],
+          "Top_Negative": [
+            {
+              "Feature": "Prot_CD3E",
+              "Value": -0.1776701807975769
+            },
+            {
+              "Feature": "Prot_RTN2",
+              "Value": -0.09116238355636597
+            },
+            {
+              "Feature": "Prot_PSMD3",
+              "Value": -0.03405085206031799
+            },
+            {
+              "Feature": "Prot_RPA3",
+              "Value": -0.03399675339460373
+            },
+            {
+              "Feature": "Prot_ROCK2",
+              "Value": -0.032516296952962875
+            },
+            {
+              "Feature": "Prot_FITM2",
+              "Value": -0.01794767752289772
+            },
+            {
+              "Feature": "Prot_NSF",
+              "Value": -0.01056093443185091
+            },
+            {
+              "Feature": "Prot_VSIG4",
+              "Value": -0.007307692430913448
+            },
+            {
+              "Feature": "Prot_VWF",
+              "Value": -0.0070146298967301846
+            }
+          ]
+        }
+      }
+    }
+  }
+}

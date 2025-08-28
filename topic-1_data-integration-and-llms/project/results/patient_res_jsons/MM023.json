@@ -1,0 +1,97 @@
+{
+  "MM023": {
+    "Disease": "Multiple Myeloma",
+    "Drugs": {
+      "Panobinostat_HDACi": {
+        "Predicted_Class": "no_effect",
+        "Predicted_Prob": 0.4240362346172333,
+        "SHAP": {
+          "Top_Positive": [
+            {
+              "Feature": "Prot_TCF20",
+              "Value": 0.11909828335046768
+            },
+            {
+              "Feature": "Prot_EIF4A3",
+              "Value": 0.04528489708900452
+            },
+            {
+              "Feature": "Prot_KRIT1",
+              "Value": 0.03973666578531265
+            },
+            {
+              "Feature": "Prot_APP",
+              "Value": 0.0330716036260128
+            },
+            {
+              "Feature": "Prot_B2M",
+              "Value": 0.030105452984571457
+            },
+            {
+              "Feature": "Prot_IL1RAP",
+              "Value": 0.029641270637512207
+            },
+            {
+              "Feature": "Prot_MGMT",
+              "Value": 0.01979532465338707
+            },
+            {
+              "Feature": "Prot_APOD",
+              "Value": 0.01892949640750885
+            },
+            {
+              "Feature": "Prot_WDR74",
+              "Value": 0.01849176548421383
+            },
+            {
+              "Feature": "Prot_SCAMP1",
+              "Value": 0.018245775252580643
+            }
+          ],
+          "Top_Negative": [
+            {
+              "Feature": "Prot_SF3B1",
+              "Value": -0.7428042888641357
+            },
+            {
+              "Feature": "Prot_UNIPROT:Q9BVV7",
+              "Value": -0.12701736390590668
+            },
+            {
+              "Feature": "Prot_AKT1",
+              "Value": -0.11464788019657135
+            },
+            {
+              "Feature": "Prot_RDH11",
+              "Value": -0.09781526029109955
+            },
+            {
+              "Feature": "Prot_RBBP4",
+              "Value": -0.09139711409807205
+            },
+            {
+              "Feature": "Prot_PRG2",
+              "Value": -0.06795458495616913
+            },
+            {
+              "Feature": "Prot_METTL9",
+              "Value": -0.06312264502048492
+            },
+            {
+              "Feature": "Prot_SELP",
+              "Value": -0.05867445468902588
+            },
+            {
+              "Feature": "Prot_TUBB1",
+              "Value": -0.057949669659137726
+            },
+            {
+              "Feature": "Prot_TARSL2",
+              "Value": -0.05161948502063751
+            }
+          ]
+        }
+      }
+    }
+  }
+}
