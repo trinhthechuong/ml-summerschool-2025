@@ -1,0 +1,51 @@
+<html><head><meta charset='utf-8'>
+<style>
+body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 40px; background: #f9f9f9; color: #2c3e50; }
+header { background: #004080; color: white; padding: 20px; border-radius: 8px; }
+header h1 { margin: 0; font-size: 26px; }
+header p { margin: 5px 0; font-size: 16px; }
+section { background: white; padding: 20px; margin-top: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+h2 { color: #004080; margin-top: 0; border-bottom: 2px solid #004080; padding-bottom: 6px; }
+h3 { color: #16a085; margin-top: 18px; }
+p, li { font-size: 15px; line-height: 1.6; }
+ul { margin: 0.25rem 0 0.75rem 1.25rem; }
+pre { background: #f4f6f7; padding: 12px; border-left: 4px solid #004080; border-radius: 4px; white-space: pre-wrap; font-size: 14px; }
+</style></head><body>
+<header>
+<h1>Patient Drug Response Prediction Report</h1>
+<p><strong>Patient ID:</strong> MM082</p>
+<p><strong>Disease:</strong> Multiple Myeloma</p>
+</header>
+<section>
+<h2>Recommended Treatment</h2>
+<p><strong>Drug Regimen:</strong> Dexamethasone+Bortezomib+Pomalidomide_Proteasome Inhibitor regime</p>
+</section>
+<section>
+<h2>Clinical Considerations</h2>
+<p>This regime combines three agents with distinct mechanisms of action, commonly used in the treatment of Multiple Myeloma:</p>
+<p>1.  <b>Dexamethasone (Corticosteroid):</b></p>
+<ul>
+<li><b>Purpose/Indications:</b> Dexamethasone is a corticosteroid used for its anti-inflammatory and immunosuppressive effects. In multiple myeloma, it is thought to induce apoptosis in myeloma cells and enhance the activity of other anti-myeloma agents.</li>
+<li><b>Positive Aspects:</b> Well-established efficacy in multiple myeloma, often used in combination therapies. Can help manage symptoms like pain and inflammation.</li>
+<li><b>Potential Adverse Effects:</b> Common side effects include fluid retention, mood changes, increased blood sugar, insomnia, and increased risk of infection. Long-term use can lead to osteoporosis, adrenal suppression, and Cushing's syndrome.</li>
+</ul>
+<p>2.  <b>Bortezomib (Proteasome Inhibitor):</b></p>
+<ul>
+<li><b>Purpose/Indications:</b> Bortezomib is a proteasome inhibitor that works by blocking the proteasome, a cellular complex that breaks down proteins. This leads to an accumulation of ubiquitinated proteins, triggering apoptosis in cancer cells, particularly myeloma cells. It is indicated for the treatment of multiple myeloma.</li>
+<li><b>Positive Aspects:</b> Highly effective in multiple myeloma, often leading to significant response rates. Can be used in newly diagnosed and relapsed/refractory settings.</li>
+<li><b>Potential Adverse Effects:</b> Common side effects include peripheral neuropathy (a significant concern), thrombocytopenia, neutropenia, fatigue, nausea, diarrhea, and constipation.</li>
+</ul>
+<p>3.  <b>Pomalidomide (Immunomodulatory Drug - IMiD):</b></p>
+<ul>
+<li><b>Purpose/Indications:</b> Pomalidomide is an immunomodulatory drug (IMiD) with direct anti-myeloma activity, as well as immunomodulatory and anti-angiogenic effects. It is indicated for patients with multiple myeloma who have received at least two prior therapies, including lenalidomide and a proteasome inhibitor, and have demonstrated disease progression on or within 60 days of completion of the last therapy.</li>
+<li><b>Positive Aspects:</b> Effective in relapsed/refractory multiple myeloma, offering an option for patients who have progressed on other treatments.</li>
+<li><b>Potential Adverse Effects:</b> Common side effects include neutropenia, thrombocytopenia, fatigue, constipation, nausea, and diarrhea. There is also a risk of venous thromboembolism, requiring prophylactic anticoagulation. Pomalidomide is teratogenic and requires strict risk management programs.</li>
+</ul>
+<p><b>Overall Assessment:</b></p>
+<p>The combination of Dexamethasone, Bortezomib, and Pomalidomide leverages different mechanisms to target multiple myeloma cells, making it a potent regimen. The model's high probability of a positive response suggests this combination is well-suited for patient MM082. Clinicians should carefully monitor for the known adverse effects of each component, particularly peripheral neuropathy with Bortezomib, myelosuppression, and the thrombotic risk associated with Pomalidomide.</p>
+</section>
+<section>
+<h2>Decision Rationale</h2>
+<p>An AI-powered predictive model suggested the Dexamethasone+Bortezomib+Pomalidomide_Proteasome Inhibitor regime as the most promising treatment option for patient MM082, with a predicted positive response probability of 0.8857. Other tested drugs (Lenalidomide_Corticosteroid + IMID, Prednisone_Corticosteroid, and Thalidomide_Corticosteroid + IMID) were predicted to have no effect. The AI model's prediction was influenced by several protein features, with both positive and negative contributions (SHAP values). Top positive SHAP features included Prot_YY1, Prot_RHOT2, Prot_AFTPH, Prot_EIF4E2, Prot_UTRN, Prot_ALOX5AP, Prot_TPP2, Prot_AGO1, Prot_WASH3P, Prot_WASH2P, and Prot_TRADD. Top negative SHAP features included Prot_MYO1C, Prot_TAP2, Prot_RNF113A, Prot_DHODH, Prot_IGKV3D-20, Prot_SLC27A3, Prot_C2CD2L, Prot_PLXDC2, Prot_COG4, and Prot_U2AF2. An enrichment analysis was performed on the combined list of genes to understand their biological context in Multiple Myeloma.</p>
+</section>
+</body></html>
