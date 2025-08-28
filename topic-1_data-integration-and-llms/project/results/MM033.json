@@ -1,0 +1,97 @@
+{
+  "MM033": {
+    "Disease": "Multiple Myeloma",
+    "Drugs": {
+      "Vinorelbin_Tubulin inhibitor": {
+        "Predicted_Class": "positive_effect",
+        "Predicted_Prob": 0.5321896076202393,
+        "SHAP": {
+          "Top_Positive": [
+            {
+              "Feature": "Prot_ACSF3",
+              "Value": 0.574474573135376
+            },
+            {
+              "Feature": "Prot_MTFMT",
+              "Value": 0.5155975818634033
+            },
+            {
+              "Feature": "Prot_HLA-DRB1",
+              "Value": 0.10085318982601166
+            },
+            {
+              "Feature": "Prot_NUDT21",
+              "Value": 0.02759079821407795
+            },
+            {
+              "Feature": "Prot_STX8",
+              "Value": 0.021267136558890343
+            },
+            {
+              "Feature": "Prot_TRIP11",
+              "Value": 0.018752802163362503
+            },
+            {
+              "Feature": "Cyto_PROK1",
+              "Value": 0.01764381118118763
+            },
+            {
+              "Feature": "Prot_TRAPPC3",
+              "Value": 0.014189057983458042
+            },
+            {
+              "Feature": "Prot_LEF1",
+              "Value": 0.012009061872959137
+            },
+            {
+              "Feature": "Prot_HYI",
+              "Value": 0.011579352430999279
+            }
+          ],
+          "Top_Negative": [
+            {
+              "Feature": "Prot_OSBPL9",
+              "Value": -0.21558164060115814
+            },
+            {
+              "Feature": "Prot_GFER",
+              "Value": -0.11358679085969925
+            },
+            {
+              "Feature": "Prot_ITGB5",
+              "Value": -0.09845757484436035
+            },
+            {
+              "Feature": "Prot_BTAF1",
+              "Value": -0.09328775107860565
+            },
+            {
+              "Feature": "Prot_UTP20",
+              "Value": -0.07004346698522568
+            },
+            {
+              "Feature": "Prot_RFC5",
+              "Value": -0.06152312085032463
+            },
+            {
+              "Feature": "Prot_GOLPH3",
+              "Value": -0.051419999450445175
+            },
+            {
+              "Feature": "Prot_ITGA2",
+              "Value": -0.04093555361032486
+            },
+            {
+              "Feature": "Prot_CD3EAP",
+              "Value": -0.039452336728572845
+            },
+            {
+              "Feature": "Prot_SUN1",
+              "Value": -0.038659725338220596
+            }
+          ]
+        }
+      }
+    }
+  }
+}

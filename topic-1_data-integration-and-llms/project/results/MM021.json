@@ -1,0 +1,97 @@
+{
+  "MM021": {
+    "Disease": "Multiple Myeloma",
+    "Drugs": {
+      "Vincristine_Tubulin inhibitor": {
+        "Predicted_Class": "no_effect",
+        "Predicted_Prob": 0.6569404602050781,
+        "SHAP": {
+          "Top_Positive": [
+            {
+              "Feature": "Prot_TP53I3",
+              "Value": 0.22526265680789948
+            },
+            {
+              "Feature": "Prot_PPP2R5C",
+              "Value": 0.16014598309993744
+            },
+            {
+              "Feature": "Prot_COG7",
+              "Value": 0.13727611303329468
+            },
+            {
+              "Feature": "Prot_UNIPROT:Q9NZC3",
+              "Value": 0.09326589107513428
+            },
+            {
+              "Feature": "Prot_PTRH2",
+              "Value": 0.08378010988235474
+            },
+            {
+              "Feature": "Prot_NCOA7",
+              "Value": 0.046897511929273605
+            },
+            {
+              "Feature": "Prot_UNIPROT:Q9NXW2",
+              "Value": 0.04280596598982811
+            },
+            {
+              "Feature": "Prot_SRRM1",
+              "Value": 0.04237581789493561
+            },
+            {
+              "Feature": "Prot_ERCC1",
+              "Value": 0.031602777540683746
+            },
+            {
+              "Feature": "Prot_PHKG2",
+              "Value": 0.030483610928058624
+            }
+          ],
+          "Top_Negative": [
+            {
+              "Feature": "Prot_TBC1D2",
+              "Value": -0.28676795959472656
+            },
+            {
+              "Feature": "Prot_POLDIP2",
+              "Value": -0.12498258799314499
+            },
+            {
+              "Feature": "Prot_PSMD3",
+              "Value": -0.09252281486988068
+            },
+            {
+              "Feature": "Prot_LSG1",
+              "Value": -0.08764784038066864
+            },
+            {
+              "Feature": "Prot_BAG3",
+              "Value": -0.08444579690694809
+            },
+            {
+              "Feature": "Prot_ZC3H18",
+              "Value": -0.08232657611370087
+            },
+            {
+              "Feature": "Prot_RBM12",
+              "Value": -0.08008867502212524
+            },
+            {
+              "Feature": "Prot_GPRIN3",
+              "Value": -0.05778536945581436
+            },
+            {
+              "Feature": "Prot_GCHFR",
+              "Value": -0.034093860536813736
+            },
+            {
+              "Feature": "Prot_INTS13",
+              "Value": -0.03321544826030731
+            }
+          ]
+        }
+      }
+    }
+  }
+}

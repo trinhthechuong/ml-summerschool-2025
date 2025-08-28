@@ -1,0 +1,277 @@
+{
+  "MM065": {
+    "Disease": "Multiple Myeloma",
+    "Drugs": {
+      "Panobinostat_HDACi": {
+        "Predicted_Class": "adverse_effect",
+        "Predicted_Prob": 0.7051398754119873,
+        "SHAP": {
+          "Top_Positive": [
+            {
+              "Feature": "Prot_DCAF7",
+              "Value": 0.3278205990791321
+            },
+            {
+              "Feature": "Prot_RAF1",
+              "Value": 0.3210175931453705
+            },
+            {
+              "Feature": "Prot_COQ5",
+              "Value": 0.1184445470571518
+            },
+            {
+              "Feature": "Prot_UNIPROT:P22670",
+              "Value": 0.10120589286088943
+            },
+            {
+              "Feature": "Prot_CFL2",
+              "Value": 0.03921676427125931
+            },
+            {
+              "Feature": "Prot_TUBA4A",
+              "Value": 0.03324328362941742
+            },
+            {
+              "Feature": "Prot_IGKV3D-11|IGKV3-11",
+              "Value": 0.0316336490213871
+            },
+            {
+              "Feature": "Prot_DMTN",
+              "Value": 0.03099759854376316
+            },
+            {
+              "Feature": "Prot_TRAPPC9",
+              "Value": 0.026721995323896408
+            },
+            {
+              "Feature": "Prot_WDR18",
+              "Value": 0.0252341628074646
+            }
+          ],
+          "Top_Negative": [
+            {
+              "Feature": "Prot_GTPBP1",
+              "Value": -0.1354081630706787
+            },
+            {
+              "Feature": "Prot_MFSD1",
+              "Value": -0.11417338252067566
+            },
+            {
+              "Feature": "Prot_TMEM65",
+              "Value": -0.08888218551874161
+            },
+            {
+              "Feature": "Prot_IL1RAP",
+              "Value": -0.04616764932870865
+            },
+            {
+              "Feature": "Prot_NCKIPSD",
+              "Value": -0.03670249506831169
+            },
+            {
+              "Feature": "Prot_NUCB1",
+              "Value": -0.0363537073135376
+            },
+            {
+              "Feature": "Prot_LDLRAP1",
+              "Value": -0.0347503162920475
+            },
+            {
+              "Feature": "Prot_IGF2BP2",
+              "Value": -0.029986675828695297
+            },
+            {
+              "Feature": "Prot_MIPEP",
+              "Value": -0.02588074654340744
+            },
+            {
+              "Feature": "Prot_WWP2",
+              "Value": -0.02093685045838356
+            }
+          ]
+        }
+      },
+      "Pomalidomide_Corticosteroid + IMID": {
+        "Predicted_Class": "no_effect",
+        "Predicted_Prob": 0.9726293087005615,
+        "SHAP": {
+          "Top_Positive": [
+            {
+              "Feature": "Prot_EXOC4",
+              "Value": 0.33779269456863403
+            },
+            {
+              "Feature": "Prot_ITGB1",
+              "Value": 0.1287996917963028
+            },
+            {
+              "Feature": "Prot_COQ8A",
+              "Value": 0.07189898192882538
+            },
+            {
+              "Feature": "Prot_VWF",
+              "Value": 0.060548052191734314
+            },
+            {
+              "Feature": "Prot_ELMOD2",
+              "Value": 0.05585887283086777
+            },
+            {
+              "Feature": "Prot_CD247",
+              "Value": 0.04258836805820465
+            },
+            {
+              "Feature": "Prot_CARS2",
+              "Value": 0.03664031997323036
+            },
+            {
+              "Feature": "Prot_ZADH2",
+              "Value": 0.03566613793373108
+            },
+            {
+              "Feature": "Prot_PRPF31",
+              "Value": 0.02923419326543808
+            },
+            {
+              "Feature": "Prot_AP4B1",
+              "Value": 0.027235612273216248
+            }
+          ],
+          "Top_Negative": [
+            {
+              "Feature": "Prot_MORF4L2",
+              "Value": -0.1984958052635193
+            },
+            {
+              "Feature": "Prot_STAU1",
+              "Value": -0.07105176150798798
+            },
+            {
+              "Feature": "Prot_PTPN12",
+              "Value": -0.032622553408145905
+            },
+            {
+              "Feature": "Prot_HLA-DRB1",
+              "Value": -0.025028299540281296
+            },
+            {
+              "Feature": "Prot_POMGNT2",
+              "Value": -0.025022149085998535
+            },
+            {
+              "Feature": "Prot_PDCD2",
+              "Value": -0.02155245468020439
+            },
+            {
+              "Feature": "Prot_PSMC3",
+              "Value": -0.014328444376587868
+            },
+            {
+              "Feature": "Prot_BZW2",
+              "Value": -0.013352809473872185
+            },
+            {
+              "Feature": "Prot_RASAL3",
+              "Value": -0.01328536681830883
+            },
+            {
+              "Feature": "Prot_CLEC12A",
+              "Value": -0.011739194393157959
+            }
+          ]
+        }
+      },
+      "Dexamethasone+Bortezomib+Pomalidomide_Proteasome Inhibitor regime": {
+        "Predicted_Class": "positive_effect",
+        "Predicted_Prob": 0.8454682230949402,
+        "SHAP": {
+          "Top_Positive": [
+            {
+              "Feature": "Prot_YY1",
+              "Value": 0.255706250667572
+            },
+            {
+              "Feature": "Prot_RHOT2",
+              "Value": 0.20347960293293
+            },
+            {
+              "Feature": "Prot_AFTPH",
+              "Value": 0.1320093721151352
+            },
+            {
+              "Feature": "Prot_EIF4E2",
+              "Value": 0.11108299344778061
+            },
+            {
+              "Feature": "Prot_UTRN",
+              "Value": 0.09493780136108398
+            },
+            {
+              "Feature": "Prot_ALOX5AP",
+              "Value": 0.08368617296218872
+            },
+            {
+              "Feature": "Prot_TPP2",
+              "Value": 0.06690849363803864
+            },
+            {
+              "Feature": "Prot_DHODH",
+              "Value": 0.042343638837337494
+            },
+            {
+              "Feature": "Prot_AGO1",
+              "Value": 0.041629478335380554
+            },
+            {
+              "Feature": "Prot_WASH3P|WASH2P",
+              "Value": 0.03819897025823593
+            }
+          ],
+          "Top_Negative": [
+            {
+              "Feature": "Prot_MYO1C",
+              "Value": -0.2547096312046051
+            },
+            {
+              "Feature": "Prot_TRADD",
+              "Value": -0.0495864599943161
+            },
+            {
+              "Feature": "Prot_LIMA1",
+              "Value": -0.047830477356910706
+            },
+            {
+              "Feature": "Prot_IGHV6-1",
+              "Value": -0.04495258629322052
+            },
+            {
+              "Feature": "Prot_FAM114A1",
+              "Value": -0.03742189332842827
+            },
+            {
+              "Feature": "Prot_SURF1",
+              "Value": -0.036965541541576385
+            },
+            {
+              "Feature": "Prot_C2CD2L",
+              "Value": -0.03146705403923988
+            },
+            {
+              "Feature": "Prot_DNASE2",
+              "Value": -0.027947820723056793
+            },
+            {
+              "Feature": "Prot_URB1",
+              "Value": -0.025926407426595688
+            },
+            {
+              "Feature": "Prot_PLA2G4A",
+              "Value": -0.021408047527074814
+            }
+          ]
+        }
+      }
+    }
+  }
+}

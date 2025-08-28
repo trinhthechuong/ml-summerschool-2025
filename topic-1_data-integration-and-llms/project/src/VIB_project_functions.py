@@ -25,7 +25,7 @@ from sklearn.impute import SimpleImputer
 
 def run_drug_classification(
     proteomics, cytokines, clinical_numeric, drug_classes, 
-    output_dir="patient_res_jsons", top_k=10
+    output_dir="results/patient_res_jsons", top_k=10
 ):
     """
     Train XGBoost classifiers for each drug, evaluate performance, 
