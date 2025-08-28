@@ -107,3 +107,46 @@ def analyze_patient(patient_json: Dict, patient_id: str, chain):
         summaries[cls] = ai_msg.content
 
     return results_by_class, summaries
+
+
+# bioassistant.py (add at the bottom)
+
+import pandas as pd
+def save_patient_summary_html(patient_id: str,
+                              results_by_class: dict,
+                              summaries: dict,
+                              out_path: str = None):
+    """
+    Save the enrichment results + LLM summaries into an HTML report.
+    
+    Parameters
+    ----------
+    patient_id : str
+        Patient identifier
+    results_by_class : dict
+        Output from analyze_patient (enrichment results)
+    summaries : dict
+        Output from analyze_patient (LLM summaries)
+    out_path : str
+        File path for the HTML file (default = f"{patient_id}_summary.html")
+    """
+    if out_path is None:
+        out_path = f"{patient_id}_summary.html"
+
+    html_parts = [f"<h1>Patient {patient_id} – Pathway Analysis Report</h1>"]
+
+    for cls, summary in summaries.items():
+        html_parts.append(f"<h2>Predicted Class: {cls}</h2>")
+        html_parts.append(f"<p><strong>LLM Summary:</strong><br>{summary}</p>")
+
+        # Insert enrichment tables
+        for direction in ["positive", "negative"]:
+            df = results_by_class[cls].get(direction)
+            if df is not None and not df.empty:
+                html_parts.append(f"<h3>{direction.title()} SHAP Features Enrichment</h3>")
+                html_parts.append(df.head(15).to_html(index=False, escape=False))
+    
+    html = "\n".join(html_parts)
+    with open(out_path, "w") as f:
+        f.write(html)
+    print(f"✅ HTML report saved to {out_path}")
