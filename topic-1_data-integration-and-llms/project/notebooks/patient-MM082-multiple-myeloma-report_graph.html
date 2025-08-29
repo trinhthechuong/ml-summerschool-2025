@@ -1,0 +1,1268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>MM082</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root{
+        --bg: #0b1020;
+        --bg-2: #0a0f24;
+        --panel: #0f1530;
+        --panel-2: #121a3d;
+        --text: #eef1f6;
+        --muted: #b8c0d6;
+        --accent: #6aa3ff;
+        --accent-2: #b084ff;
+        --border: rgba(255,255,255,0.08);
+        --chip: #182149;
+        --shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 10px 30px rgba(0,0,0,0.45);
+        --hr: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+      }
+      @media (prefers-color-scheme: light){
+        :root{
+          --bg: #f6f8ff;
+          --bg-2: #eef2ff;
+          --panel: #ffffff;
+          --panel-2: #f7f9ff;
+          --text: #0d1225;
+          --muted: #5a6a8a;
+          --accent: #2d6bff;
+          --accent-2: #7a4dff;
+          --border: rgba(0,0,0,0.08);
+          --chip: #e9efff;
+          --shadow: 0 1px 3px rgba(0,0,0,0.08);
+          --hr: linear-gradient(90deg, transparent, rgba(0,0,0,0.25), transparent);
+        }
+      }
+      html, body { height: 100%; }
+      body{
+        margin:0;
+        font-family: Inter, ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+        color: var(--text);
+        background:
+          radial-gradient(800px 300px at 10% -10%, rgba(106,163,255,0.16), transparent 60%),
+          radial-gradient(900px 340px at 90% -10%, rgba(176,132,255,0.18), transparent 60%),
+          linear-gradient(180deg, var(--bg), var(--bg-2));
+        line-height: 1.6;
+      }
+      .container{
+        max-width: 980px;
+        margin: 28px auto 60px;
+        padding: 0 18px;
+      }
+      .card{
+        backdrop-filter: saturate(1.1) blur(0px);
+        background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02)), var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+      .hero{
+        padding: 18px 18px 0;
+        background:
+          radial-gradient(1100px 380px at 15% -20%, rgba(106,163,255,0.18), transparent),
+          radial-gradient(1000px 360px at 85% -10%, rgba(176,132,255,0.18), transparent);
+      }
+      .hero .band{
+        height: 5px;
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        border-radius: 3px;
+        margin: 0 0 16px 0;
+      }
+      .content{
+        padding: 18px;
+      }
+      h2, h3{
+        margin: 14px 0 8px;
+        letter-spacing: 0.2px;
+      }
+      h2{
+        font-size: 20px;
+        background: linear-gradient(90deg, rgba(106,163,255,0.25), rgba(176,132,255,0.25));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      h3{
+        font-size: 18px;
+        color: var(--text);
+      }
+      p{ margin: 10px 0; color: var(--text); }
+      ul{ margin: 8px 0 12px 22px; }
+      li{ margin: 6px 0; }
+      code{ background: var(--chip); padding: 2px 6px; border-radius: 6px; border: 1px solid var(--border); }
+      pre{
+        background: var(--panel-2);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 12px;
+        overflow: auto;
+        box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04);
+      }
+      hr{
+        height: 1px;
+        border: none;
+        background: var(--hr);
+        margin: 18px 0;
+      }
+      .section{
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 14px;
+        margin: 14px 0;
+      }
+      .badge{
+        display: inline-block;
+        padding: 2px 8px;
+        border-radius: 999px;
+        font-size: 12px;
+        border: 1px solid var(--border);
+        background: var(--chip);
+        color: var(--text);
+      }
+      .grid-3{
+        display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+      }
+      @media (max-width: 900px){
+        .grid-3{ grid-template-columns: 1fr; }
+      }
+      .divider{
+        height: 8px;
+        background: linear-gradient(90deg, rgba(106,163,255,0.15), rgba(176,132,255,0.15));
+        border-radius: 8px;
+        margin: 18px 0 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="hero">
+          <div class="band"></div>
+        </div>
+        <div class="content">
+          <div style="border:1px solid var(--border); border-radius:12px; background:var(--panel-2); box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04); overflow:hidden; margin-bottom: 12px;">
+            <div style="height:6px; background:linear-gradient(90deg, var(--accent), var(--accent-2));"></div>
+            <div style="padding:12px;">
+              <div style="display:grid; grid-template-columns: 220px 1fr; gap:8px 12px;">
+                <div style="color:var(--muted); border:1px solid var(--border); background:rgba(255,255,255,0.02); padding:8px 10px; border-radius:10px;">patient_ID</div>
+                <div style="border:1px solid var(--border); background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.03)); padding:8px 12px; border-radius:10px;">MM082</div>
+
+                <div style="color:var(--muted); border:1px solid var(--border); background:rgba(255,255,255,0.02); padding:8px 10px; border-radius:10px;">disease_type</div>
+                <div style="border:1px solid var(--border); background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.03)); padding:8px 12px; border-radius:10px;">Multiple Myeloma</div>
+
+                <div style="color:var(--muted); border:1px solid var(--border); background:rgba(255,255,255,0.02); padding:8px 10px; border-radius:10px;">recomended_drug_name</div>
+                <div style="border:1px solid var(--border); background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.03)); padding:8px 12px; border-radius:10px;">Dexamethasone+Bortezomib+Pomalidomide_Proteasome Inhibitor regime</div>
+
+                <div style="color:var(--muted); border:1px solid var(--border); background:rgba(255,255,255,0.02); padding:8px 10px; border-radius:10px;">probability</div>
+                <div style="border:1px solid var(--border); background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.03)); padding:8px 12px; border-radius:10px;">
+                  0.8857
+                  <div style="position:relative; height:10px; border-radius:999px; overflow:hidden; margin-top:8px; background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(0,0,0,.05)); border:1px solid var(--border);">
+                    <span style="position:absolute; inset:0; width:calc(0.8857 * 100%); background:linear-gradient(90deg, var(--accent), var(--accent-2)); border-radius:inherit;"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p>I used a tool to query information about these drugs. Specifically, I used the <code>get_openfda_label</code> tool to retrieve details from the openFDA database for Dexamethasone, Bortezomib, and Pomalidomide.</p>
+
+          <p>Here's information about each drug in the Dexamethasone + Bortezomib + Pomalidomide (often referred to as PVd or similar, depending on the specific regimen) combination for Multiple Myeloma:</p>
+
+          <hr />
+
+          <h3>1. Dexamethasone</h3>
+
+          <ul>
+            <li><strong>Drug Class:</strong> Corticosteroid</li>
+            <li><strong>Mechanism of Action:</strong> Dexamethasone has multiple effects in Multiple Myeloma. It directly induces apoptosis (programmed cell death) in myeloma cells, reduces inflammation, and has immunosuppressive properties. It also enhances the activity of other anti-myeloma agents.</li>
+            <li><strong>Role in Multiple Myeloma:</strong> It is a cornerstone of most Multiple Myeloma treatment regimens, used in both newly diagnosed and relapsed/refractory settings, almost always in combination with other drugs.</li>
+            <li><strong>Common Side Effects:</strong> Hyperglycemia (high blood sugar), insomnia, mood changes (anxiety, depression, euphoria), fluid retention, increased appetite, indigestion, increased risk of infection, and bone thinning with long-term use.</li>
+          </ul>
+
+          <hr />
+
+          <h3>2. Bortezomib</h3>
+
+          <ul>
+            <li><strong>Drug Class:</strong> Proteasome Inhibitor</li>
+            <li><strong>Mechanism of Action:</strong> Bortezomib is a reversible inhibitor of the 26S proteasome, a multi-enzyme complex responsible for degrading ubiquitinated proteins. By inhibiting the proteasome, bortezomib causes an accumulation of misfolded and ubiquitinated proteins within myeloma cells. This leads to endoplasmic reticulum stress, activation of unfolded protein response, and ultimately, apoptosis of the cancer cells.</li>
+            <li><strong>Role in Multiple Myeloma:</strong> It is a highly effective agent approved for the treatment of both newly diagnosed and relapsed/refractory Multiple Myeloma. It is often used in combination with other drugs like Dexamethasone and immunomodulatory drugs.</li>
+            <li><strong>Common Side Effects:</strong> Peripheral neuropathy (nerve damage, which can cause numbness, tingling, or pain in hands and feet), thrombocytopenia (low platelet count), neutropenia (low white blood cell count), fatigue, nausea, diarrhea, constipation, and rash.</li>
+          </ul>
+
+          <hr />
+
+          <h3>3. Pomalidomide</h3>
+
+          <ul>
+            <li><strong>Drug Class:</strong> Immunomodulatory Drug (IMiD)</li>
+            <li><strong>Mechanism of Action:</strong> Pomalidomide has multiple anti-myeloma effects. It directly inhibits the proliferation and induces apoptosis of hematopoietic tumor cells. It also enhances T-cell and Natural Killer (NK) cell-mediated immunity, inhibits angiogenesis (formation of new blood vessels that feed tumors), and inhibits the production of pro-inflammatory cytokines.</li>
+            <li><strong>Role in Multiple Myeloma:</strong> Pomalidomide is approved for the treatment of adult patients with relapsed/refractory Multiple Myeloma who have received at least two prior therapies, including lenalidomide and a proteasome inhibitor, and have demonstrated disease progression on or within 60 days of completion of the last therapy. It is typically used in combination with Dexamethasone.</li>
+            <li><strong>Common Side Effects:</strong> Myelosuppression (low blood counts, particularly neutropenia and thrombocytopenia), fatigue, deep vein thrombosis (DVT) and pulmonary embolism (PE) (requiring prophylactic anticoagulation), peripheral neuropathy, constipation, and dyspnea (shortness of breath).</li>
+          </ul>
+
+          <hr />
+
+          <h3>The Dexamethasone + Bortezomib + Pomalidomide Regimen</h3>
+
+          <p>This triple-drug combination leverages different mechanisms of action to target Multiple Myeloma cells, aiming for synergistic effects and improved outcomes, especially in patients with relapsed or refractory disease.</p>
+
+          <ul>
+            <li><strong>Dexamethasone</strong> enhances the activity of both bortezomib and pomalidomide.</li>
+            <li><strong>Bortezomib</strong> targets the proteasome, disrupting protein homeostasis in myeloma cells.</li>
+            <li><strong>Pomalidomide</strong> provides direct anti-tumor effects, immunomodulation, and anti-angiogenic activity.</li>
+          </ul>
+
+          <p>This combination is a potent regimen designed to overcome resistance and achieve deeper and more durable responses in patients who have progressed on prior therapies. Due to the potential for overlapping toxicities, careful monitoring for side effects, particularly myelosuppression and peripheral neuropathy, is crucial.</p>
+
+          <div class="divider"></div>
+
+          <h3>Drugs Predicted as no_effect</h3>
+          <p>The SHAP features provide insights into the functional biology and pathways that either support or contradict the "no_effect" prediction.</p>
+
+          <p><strong>Pathways supporting "no_effect":</strong><br />
+          These features primarily highlight general immune regulation and fundamental cellular processes. Key themes include:</p>
+          <ul>
+            <li><strong>T cell regulation:</strong> Regulation of immune response, positive regulation of T cell proliferation, activation, and lymphocyte proliferation (involving genes like CD3E, IL15, ICAM3). This suggests a controlled or baseline level of T cell activity rather than an overt, strong response.</li>
+            <li><strong>Cellular maintenance and development:</strong> Regulation of cell-cell adhesion, posttranscriptional regulation of gene expression (NUDT21, RBM4B), protein-containing complex assembly (CUL1, SNX9, CD3E), and even substantia nigra development (GLUD1, CNP). These pathways point towards normal cellular functions and development, which would align with a "no_effect" outcome.</li>
+          </ul>
+
+          <p><strong>Pathways arguing against "no_effect":</strong><br />
+          These features indicate more specific and robust immune activation, suggesting a significant biological effect. Key themes include:</p>
+          <ul>
+            <li><strong>Innate immunity and neutrophil activity:</strong> Strong signals for neutrophil degranulation, activation, and neutrophil-mediated immunity (involving genes like CTSZ, HLA-B, HP, SRP14, SERPINB6). This points to an active innate immune response.</li>
+            <li><strong>Adaptive immunity and cytotoxicity:</strong> Pathways related to positive regulation of T cell mediated cytotoxicity, T cell mediated immunity, leukocyte mediated cytotoxicity, and interferon-gamma-mediated signaling pathway (involving HLA-B, HLA-DRA). These indicate a potent adaptive immune response, specifically cytotoxic T cell activity, which would imply a clear biological effect.</li>
+            <li><strong>Cellular dynamics and pathology:</strong> Regulation of actin filament-based processes (ARHGAP18, RHOC) and regulation of neuron death (GPNMB, CTSZ) also appear, suggesting cellular changes or potential damage.</li>
+          </ul>
+
+          <p><strong>Summary:</strong><br />
+          The "no_effect" prediction is supported by pathways indicative of general immune homeostasis and routine cellular functions. Conversely, the prediction is strongly contradicted by pathways associated with active and specific immune responses, particularly involving neutrophil activation and T cell-mediated cytotoxicity, as well as interferon-gamma signaling. This suggests that while some features point to a lack of significant change, others highlight robust immune engagement that would argue for a distinct biological effect.</p>
+
+          <div class="divider"></div>
+
+          <h3>Drugs Predicted as positive_effect</h3>
+          <p>The positive SHAP features, supporting a "positive_effect," are primarily associated with the <strong>negative regulation of gene expression</strong>, particularly through <strong>miRNA-mediated gene silencing</strong>. Key genes involved in these processes include AGO1, EIF4E2, and YY1. Additionally, pathways related to <strong>lipoxin metabolic and biosynthetic processes</strong> (involving ALOX5AP) and <strong>death-inducing signaling complex assembly</strong> (TRADD) are highlighted.</p>
+
+          <p>Conversely, the negative SHAP features, arguing against a "positive_effect," are strongly linked to <strong>pyrimidine nucleobase and ribonucleotide biosynthetic and metabolic processes</strong>, with DHODH being a central gene. Other pathways include the <strong>positive regulation of vascular endothelial growth factor (VEGF) signaling</strong> (MYO1C), <strong>peptide transport and antigen processing and presentation via MHC class I</strong> (TAP2), and the <strong>regulation of chemokine-mediated signaling pathways</strong> (RNF113A).</p>
+
+          <p><strong>Summary:</strong><br /> 
+          The "positive_effect" appears to be supported by mechanisms that suppress gene expression, especially via miRNAs, and involve lipoxin metabolism. Conversely, processes related to fundamental cellular building blocks (pyrimidine synthesis), immune responses, and VEGF signaling seem to counteract this "positive_effect."</p>
+
+          <div class="divider"></div>
+
+          <h2 id="patient-similarity">Patient Similarity</h2>
+          <p><span class="badge">Regimen</span> Here is the summary of training patients whose treatment outcomes match MM082's predicted class for each regimen:</p>
+
+          <div class="section">
+            <h3>Regimen: Lenalidomide_Corticosteroid + IMID</h3>
+            <ul>
+              <li><strong>Patient MM021</strong>
+                <ul>
+                  <li>Age: 71, Sex: f</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: None reported as present mg/L</li>
+                  <li>Key Cytogenetics: 1q gain: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM023</strong>
+                <ul>
+                  <li>Age: 69, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: LC-Kappa</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 712.5 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM025</strong>
+                <ul>
+                  <li>Age: 65, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 53 mg/L</li>
+                  <li>Key Cytogenetics: None reported as present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM026</strong>
+                <ul>
+                  <li>Age: 59, Sex: m</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: IgG-Lambda</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 533 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM027</strong>
+                <ul>
+                  <li>Age: 69, Sex: m</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: LC-Lambda</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: None reported as present mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM028</strong>
+                <ul>
+                  <li>Age: 62, Sex: m</li>
+                  <li>Treatment Stage: relapse/progress, Prior Lines: 3+</li>
+                  <li>Isotype/Light Chain: IgG-Lambda</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: 711 mg/L</li>
+                  <li>Key Cytogenetics: None reported as present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM042</strong>
+                <ul>
+                  <li>Age: 79, Sex: m</li>
+                  <li>Treatment Stage: relapse/progress, Prior Lines: 3+</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 30 mg/L</li>
+                  <li>Key Cytogenetics: None reported as present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM044</strong>
+                <ul>
+                  <li>Age: 63, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 32.1 mg/L</li>
+                  <li>Key Cytogenetics: del17p: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM046</strong>
+                <ul>
+                  <li>Age: 79, Sex: m</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: LC-Lambda</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 3633.3 mg/L</li>
+                  <li>Key Cytogenetics: t(11;14): Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM047</strong>
+                <ul>
+                  <li>Age: 64, Sex: m</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: 168.7 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM048</strong>
+                <ul>
+                  <li>Age: 60, Sex: m</li>
+                  <li>Treatment Stage: control after allo-TPL, Prior Lines: 3+</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 28 mg/L</li>
+                  <li>Key Cytogenetics: t(11;14): Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM049</strong>
+                <ul>
+                  <li>Age: 43, Sex: f</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: IgG-Lambda</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: 170 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM051</strong>
+                <ul>
+                  <li>Age: 80, Sex: m</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: 853.7 mg/L</li>
+                  <li>Key Cytogenetics: 1q gain: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM053</strong>
+                <ul>
+                  <li>Age: 69, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: LC-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 118 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM058</strong>
+                <ul>
+                  <li>Age: 55, Sex: f</li>
+                  <li>Treatment Stage: relapse/progress, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgA-Kappa</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 14 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM061</strong>
+                <ul>
+                  <li>Age: 74, Sex: f</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: LC-Lambda</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 1258.2 mg/L</li>
+                  <li>Key Cytogenetics: t(11;14): Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM062</strong>
+                <ul>
+                  <li>Age: 64, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: 27 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM065</strong>
+                <ul>
+                  <li>Age: 63, Sex: f</li>
+                  <li>Treatment Stage: control after allo-TPL, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: N/A</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 83 mg/L</li>
+                  <li>Key Cytogenetics: t(11;14): Present, 1q gain: Present, del17p: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM069</strong>
+                <ul>
+                  <li>Age: 48, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 15 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM075</strong>
+                <ul>
+                  <li>Age: 64, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 14 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM077</strong>
+                <ul>
+                  <li>Age: 63, Sex: f</li>
+                  <li>Treatment Stage: control after allo-TPL, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: N/A</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: 332 mg/L</li>
+                  <li>Key Cytogenetics: t(11;14): Present, 1q gain: Present, del17p: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM079</strong>
+                <ul>
+                  <li>Age: 66, Sex: f</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Lambda</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 4 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM081</strong>
+                <ul>
+                  <li>Age: 54, Sex: m</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: IgG-Kappa/IgA-Kappa</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: None reported as present mg/L</li>
+                  <li>Key Cytogenetics: None reported as present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM084</strong>
+                <ul>
+                  <li>Age: 75, Sex: m</li>
+                  <li>Treatment Stage: relapse/progress, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgA-Kappa</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 940 mg/L</li>
+                  <li>Key Cytogenetics: None reported as present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM092</strong>
+                <ul>
+                  <li>Age: 81, Sex: m</li>
+                  <li>Treatment Stage: relapse/progress, Prior Lines: 2</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: None reported as present mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM094</strong>
+                <ul>
+                  <li>Age: 68, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: LC-Kappa</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 2246 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h3>Regimen: Prednisone_Corticosteroid</h3>
+            <ul>
+              <li><strong>Patient MM023</strong>
+                <ul>
+                  <li>Age: 69, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: LC-Kappa</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 712.5 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM025</strong>
+                <ul>
+                  <li>Age: 65, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 53 mg/L</li>
+                  <li>Key Cytogenetics: None reported as present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM026</strong>
+                <ul>
+                  <li>Age: 59, Sex: m</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: IgG-Lambda</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 533 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM027</strong>
+                <ul>
+                  <li>Age: 69, Sex: m</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: LC-Lambda</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: None reported as present mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM036</strong>
+                <ul>
+                  <li>Age: 51, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 3+</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 7 mg/L</li>
+                  <li>Key Cytogenetics: None reported as present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM037</strong>
+                <ul>
+                  <li>Age: 40, Sex: m</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: 68.4 mg/L</li>
+                  <li>Key Cytogenetics: del17p: Present, Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM044</strong>
+                <ul>
+                  <li>Age: 63, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 32.1 mg/L</li>
+                  <li>Key Cytogenetics: del17p: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM047</strong>
+                <ul>
+                  <li>Age: 64, Sex: m</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: 168.7 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM049</strong>
+                <ul>
+                  <li>Age: 43, Sex: f</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: IgG-Lambda</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: 170 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM051</strong>
+                <ul>
+                  <li>Age: 80, Sex: m</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: 853.7 mg/L</li>
+                  <li>Key Cytogenetics: 1q gain: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM053</strong>
+                <ul>
+                  <li>Age: 69, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: LC-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 118 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM059</strong>
+                <ul>
+                  <li>Age: 64, Sex: f</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 2</li>
+                  <li>Isotype/Light Chain: IgA-Kappa</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: 11 mg/L</li>
+                  <li>Key Cytogenetics: None reported as present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM061</strong>
+                <ul>
+                  <li>Age: 74, Sex: f</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: LC-Lambda</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 1258.2 mg/L</li>
+                  <li>Key Cytogenetics: t(11;14): Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM062</strong>
+                <ul>
+                  <li>Age: 64, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: 27 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM065</strong>
+                <ul>
+                  <li>Age: 63, Sex: f</li>
+                  <li>Treatment Stage: control after allo-TPL, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: N/A</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 83 mg/L</li>
+                  <li>Key Cytogenetics: t(11;14): Present, 1q gain: Present, del17p: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM067</strong>
+                <ul>
+                  <li>Age: 69, Sex: f</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: IgA-Kappa</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 6006 mg/L</li>
+                  <li>Key Cytogenetics: None reported as present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM070</strong>
+                <ul>
+                  <li>Age: 68, Sex: f</li>
+                  <li>Treatment Stage: relapse/progress, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 194 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM072</strong>
+                <ul>
+                  <li>Age: 63, Sex: f</li>
+                  <li>Treatment Stage: control after allo-TPL, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: N/A</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: 178.4 mg/L</li>
+                  <li>Key Cytogenetics: t(11;14): Present, 1q gain: Present, del17p: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM075</strong>
+                <ul>
+                  <li>Age: 64, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 14 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM077</strong>
+                <ul>
+                  <li>Age: 63, Sex: f</li>
+                  <li>Treatment Stage: control after allo-TPL, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: N/A</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: 332 mg/L</li>
+                  <li>Key Cytogenetics: t(11;14): Present, 1q gain: Present, del17p: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM078</strong>
+                <ul>
+                  <li>Age: 44, Sex: f</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Lambda</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: 1 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM079</strong>
+                <ul>
+                  <li>Age: 66, Sex: f</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Lambda</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 4 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM081</strong>
+                <ul>
+                  <li>Age: 54, Sex: m</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: IgG-Kappa/IgA-Kappa</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: None reported as present mg/L</li>
+                  <li>Key Cytogenetics: None reported as present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM084</strong>
+                <ul>
+                  <li>Age: 75, Sex: m</li>
+                  <li>Treatment Stage: relapse/progress, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgA-Kappa</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 940 mg/L</li>
+                  <li>Key Cytogenetics: None reported as present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM089</strong>
+                <ul>
+                  <li>Age: 69, Sex: f</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 3.4 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM092</strong>
+                <ul>
+                  <li>Age: 81, Sex: m</li>
+                  <li>Treatment Stage: relapse/progress, Prior Lines: 2</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: None reported as present mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM094</strong>
+                <ul>
+                  <li>Age: 68, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: LC-Kappa</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 2246 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h3>Regimen: Thalidomide_Corticosteroid + IMID</h3>
+            <ul>
+              <li><strong>Patient MM023</strong>
+                <ul>
+                  <li>Age: 69, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: LC-Kappa</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 712.5 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM025</strong>
+                <ul>
+                  <li>Age: 65, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 53 mg/L</li>
+                  <li>Key Cytogenetics: None reported as present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM026</strong>
+                <ul>
+                  <li>Age: 59, Sex: m</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: IgG-Lambda</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 533 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM027</strong>
+                <ul>
+                  <li>Age: 69, Sex: m</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: LC-Lambda</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: None reported as present mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM028</strong>
+                <ul>
+                  <li>Age: 62, Sex: m</li>
+                  <li>Treatment Stage: relapse/progress, Prior Lines: 3+</li>
+                  <li>Isotype/Light Chain: IgG-Lambda</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: 711 mg/L</li>
+                  <li>Key Cytogenetics: None reported as present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM036</strong>
+                <ul>
+                  <li>Age: 51, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 3+</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 7 mg/L</li>
+                  <li>Key Cytogenetics: None reported as present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM039</strong>
+                <ul>
+                  <li>Age: 69, Sex: f</li>
+                  <li>Treatment Stage: relapse/progress, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Lambda</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 1266 mg/L</li>
+                  <li>Key Cytogenetics: del17p: Present, Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM042</strong>
+                <ul>
+                  <li>Age: 79, Sex: m</li>
+                  <li>Treatment Stage: relapse/progress, Prior Lines: 3+</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 30 mg/L</li>
+                  <li>Key Cytogenetics: None reported as present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM044</strong>
+                <ul>
+                  <li>Age: 63, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 32.1 mg/L</li>
+                  <li>Key Cytogenetics: del17p: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM047</strong>
+                <ul>
+                  <li>Age: 64, Sex: m</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: 168.7 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM048</strong>
+                <ul>
+                  <li>Age: 60, Sex: m</li>
+                  <li>Treatment Stage: control after allo-TPL, Prior Lines: 3+</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 28 mg/L</li>
+                  <li>Key Cytogenetics: t(11;14): Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM051</strong>
+                <ul>
+                  <li>Age: 80, Sex: m</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: 853.7 mg/L</li>
+                  <li>Key Cytogenetics: 1q gain: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM053</strong>
+                <ul>
+                  <li>Age: 69, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: LC-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 118 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM058</strong>
+                <ul>
+                  <li>Age: 55, Sex: f</li>
+                  <li>Treatment Stage: relapse/progress, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgA-Kappa</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 14 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM061</strong>
+                <ul>
+                  <li>Age: 74, Sex: f</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: LC-Lambda</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 1258.2 mg/L</li>
+                  <li>Key Cytogenetics: t(11;14): Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM065</strong>
+                <ul>
+                  <li>Age: 63, Sex: f</li>
+                  <li>Treatment Stage: control after allo-TPL, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: N/A</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 83 mg/L</li>
+                  <li>Key Cytogenetics: t(11;14): Present, 1q gain: Present, del17p: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM067</strong>
+                <ul>
+                  <li>Age: 69, Sex: f</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: IgA-Kappa</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 6006 mg/L</li>
+                  <li>Key Cytogenetics: None reported as present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM070</strong>
+                <ul>
+                  <li>Age: 68, Sex: f</li>
+                  <li>Treatment Stage: relapse/progress, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 194 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM075</strong>
+                <ul>
+                  <li>Age: 64, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 14 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM077</strong>
+                <ul>
+                  <li>Age: 63, Sex: f</li>
+                  <li>Treatment Stage: control after allo-TPL, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: N/A</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: 332 mg/L</li>
+                  <li>Key Cytogenetics: t(11;14): Present, 1q gain: Present, del17p: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM079</strong>
+                <ul>
+                  <li>Age: 66, Sex: f</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Lambda</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 4 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM081</strong>
+                <ul>
+                  <li>Age: 54, Sex: m</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: IgG-Kappa/IgA-Kappa</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: None reported as present mg/L</li>
+                  <li>Key Cytogenetics: None reported as present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM084</strong>
+                <ul>
+                  <li>Age: 75, Sex: m</li>
+                  <li>Treatment Stage: relapse/progress, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgA-Kappa</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 940 mg/L</li>
+                  <li>Key Cytogenetics: None reported as present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM089</strong>
+                <ul>
+                  <li>Age: 69, Sex: f</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 3.4 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM094</strong>
+                <ul>
+                  <li>Age: 68, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: LC-Kappa</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 2246 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h3>Regimen: Dexamethasone+Bortezomib+Pomalidomide_Proteasome Inhibitor regime</h3>
+            <ul>
+              <li><strong>Patient MM021</strong>
+                <ul>
+                  <li>Age: 71, Sex: f</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: None reported as present mg/L</li>
+                  <li>Key Cytogenetics: 1q gain: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM023</strong>
+                <ul>
+                  <li>Age: 69, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: LC-Kappa</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 712.5 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM026</strong>
+                <ul>
+                  <li>Age: 59, Sex: m</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: IgG-Lambda</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 533 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM027</strong>
+                <ul>
+                  <li>Age: 69, Sex: m</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: LC-Lambda</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: None reported as present mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM028</strong>
+                <ul>
+                  <li>Age: 62, Sex: m</li>
+                  <li>Treatment Stage: relapse/progress, Prior Lines: 3+</li>
+                  <li>Isotype/Light Chain: IgG-Lambda</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: 711 mg/L</li>
+                  <li>Key Cytogenetics: None reported as present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM033</strong>
+                <ul>
+                  <li>Age: 79, Sex: m</li>
+                  <li>Treatment Stage: relapse/progress, Prior Lines: 3+</li>
+                  <li>Isotype/Light Chain: IgA-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 501 mg/L</li>
+                  <li>Key Cytogenetics: None reported as present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM042</strong>
+                <ul>
+                  <li>Age: 79, Sex: m</li>
+                  <li>Treatment Stage: relapse/progress, Prior Lines: 3+</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 30 mg/L</li>
+                  <li>Key Cytogenetics: None reported as present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM051</strong>
+                <ul>
+                  <li>Age: 80, Sex: m</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: 853.7 mg/L</li>
+                  <li>Key Cytogenetics: 1q gain: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM053</strong>
+                <ul>
+                  <li>Age: 69, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: LC-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 118 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM058</strong>
+                <ul>
+                  <li>Age: 55, Sex: f</li>
+                  <li>Treatment Stage: relapse/progress, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgA-Kappa</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 14 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM059</strong>
+                <ul>
+                  <li>Age: 64, Sex: f</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 2</li>
+                  <li>Isotype/Light Chain: IgA-Kappa</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: 11 mg/L</li>
+                  <li>Key Cytogenetics: None reported as present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM062</strong>
+                <ul>
+                  <li>Age: 64, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: 27 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM067</strong>
+                <ul>
+                  <li>Age: 69, Sex: f</li>
+                  <li>Treatment Stage: untreated, Prior Lines: 0</li>
+                  <li>Isotype/Light Chain: IgA-Kappa</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 6006 mg/L</li>
+                  <li>Key Cytogenetics: None reported as present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM069</strong>
+                <ul>
+                  <li>Age: 48, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 15 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM070</strong>
+                <ul>
+                  <li>Age: 68, Sex: f</li>
+                  <li>Treatment Stage: relapse/progress, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 194 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM072</strong>
+                <ul>
+                  <li>Age: 63, Sex: f</li>
+                  <li>Treatment Stage: control after allo-TPL, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: N/A</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: 178.4 mg/L</li>
+                  <li>Key Cytogenetics: t(11;14): Present, 1q gain: Present, del17p: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM075</strong>
+                <ul>
+                  <li>Age: 64, Sex: m</li>
+                  <li>Treatment Stage: treatment control, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 14 mg/L</li>
+                  <li>Key Cytogenetics: Hyperdiploidy: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM077</strong>
+                <ul>
+                  <li>Age: 63, Sex: f</li>
+                  <li>Treatment Stage: control after allo-TPL, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: N/A</li>
+                  <li>Phenogroup: Group2</li>
+                  <li>sFLC range: 332 mg/L</li>
+                  <li>Key Cytogenetics: t(11;14): Present, 1q gain: Present, del17p: Present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM084</strong>
+                <ul>
+                  <li>Age: 75, Sex: m</li>
+                  <li>Treatment Stage: relapse/progress, Prior Lines: 1</li>
+                  <li>Isotype/Light Chain: IgA-Kappa</li>
+                  <li>Phenogroup: Group1</li>
+                  <li>sFLC range: 940 mg/L</li>
+                  <li>Key Cytogenetics: None reported as present</li>
+                </ul>
+              </li>
+              <li><strong>Patient MM106</strong>
+                <ul>
+                  <li>Age: 53, Sex: m</li>
+                  <li>Treatment Stage: relapse/progress, Prior Lines: 2</li>
+                  <li>Isotype/Light Chain: IgG-Kappa</li>
+                  <li>Phenogroup: Group3</li>
+                  <li>sFLC range: 7110.1 mg/L</li>
+                  <li>Key Cytogenetics: None reported as present</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
